@@ -42,13 +42,13 @@ h1{
   gap: 15px;
 
   grid-template-areas:
-    "sideBar Title Title Title"
+    "SideBar Title Title Title"
     "SideBar About About About"
     "SideBar About About About"
     "SideBar About About About"
     "SideBar Fandoms Fandoms Fandoms"
     "SideBar Fandoms Fandoms Fandoms"
-    "WebButtons Webbuttons Webbuttons Webbuttons"
+    "WebButtons WebButtons WebButtons WebButtons"
     "Friends Friends Friends Friends";
 }
 
