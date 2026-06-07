@@ -130,6 +130,14 @@ h1{
    font-size: 20px;
    
  }
+.WebButons : hover {
+  background-color: #816c93;
+   padding: 20px 50px;
+   display: inline-block;
+   cursor: pointer;
+   font-family: "Garmond";
+   font-size: 22px;
+   
 /*end for buttons for the other pages grid*/
 
 .HangingLeaves {
