@@ -77,24 +77,15 @@ h1{
   background-color: #010620;
   font-size: 15px;
 }
-.Basic2 {
-  
-  border-style: solid;
-  border-width: 100px;
-  border-image: url(https://sl3ep.neocities.org/Images/divBorder3.png) 800 repeat;
-  border-image-outset: 12px;
-  border-image-slice: 17%;;
-  
-  background-color: #010620;
-  font-size: 15px;
-}
+
+
 .sideBar{
   background-image: url(https://drive.google.com/file/d/1WTLuL15sK4BrB7VDgIUQhlqQsC7L6ect/view?usp=drive_link);
 }
 
 .TITLE {
   margin:auto;
-  background-color: black;
+  
 }
 
 /* buttons for the other pages grid*/
