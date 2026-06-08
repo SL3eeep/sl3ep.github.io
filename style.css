@@ -177,15 +177,13 @@ h1{
 }
   
 .WallBorderTop {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
     }
 .WallBorderBottom {
-      transform: scale(-1, -1);
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 1000;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
