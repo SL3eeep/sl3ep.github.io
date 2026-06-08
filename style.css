@@ -68,17 +68,17 @@ h1{
 .FandomsGrid { 
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 200px;
+  grid-template-rows: 20px;
   /*grid-auto-columns: 300px;
   grid-auto-rows: 300px*/
-  gap: 15px;
+  gap: 5px;
   grid-template_areas:
     "Box-1 Box-2 Box-3 Box-4"
     "MAIN MAIN MAIN MAIN";
 }
 .FandomsGrid div{
   
-  padding: 7px;
+  padding: 1px;
   font-size: 20px;
   color: #dadbe8;
   text-align: center; 
