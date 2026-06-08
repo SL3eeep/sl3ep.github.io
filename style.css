@@ -1,46 +1,37 @@
 
 
-
 p {
-  color : #dadbe8;
+  color: #dadbe8;
 }
 
 body {
-  background-color : #070a25;
-  
-  color : #dadbe8;
-  
+  background-color: #070a25;
+  color: #dadbe8;
   font-family: "Garmond";
   text-indent: 1px;
   font-size: 10px;
-  background-image: url(https://sl3ep.neocities.org/Images/Background1.jpg) ;
-  }
+  background-image: url(https://sl3ep.neocities.org/Images/Background1.jpg);
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 
 ul {
   letter-spacing: 1px;
   word-spacing: 2px;
 }
 
-h1{
-  text-align:center;
+h1 {
+  text-align: center;
   font-size: 60px;
 }
 
-
-/*h2{
-  padding:10px;
-  
-}*/
-/* Start of Everything layout Grid*/
-.EVERYTHINGgrid{
+/* Start of Everything layout Grid */
+.EVERYTHINGgrid {
   height: 2500px;
   display: grid;
-  grid-template-columns: 200p;
+  grid-template-columns: 200px;
   grid-template-rows: 200px;
-  /*grid-auto-columns: 300px;
-  grid-auto-rows: 300px*/
   gap: 15px;
-
   grid-template-areas:
     "SideBar Title Title Title"
     "SideBar About About About"
@@ -52,38 +43,32 @@ h1{
     "SideBar Friends Friends Friends";
 }
 
-.EVERYTHINGgrid div{
-  
+.EVERYTHINGgrid div {
   padding: 7px;
   font-size: 20px;
   color: #dadbe8;
-  text-align: center; 
-  
+  text-align: center;
   width: 85%;
-
 }
 
-
-/* End of everything layout grid*/
-.FandomsGrid { 
+/* End of everything layout grid */
+.FandomsGrid {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 20px;
   overflow: hidden;
-  /*grid-auto-columns: 300px;
-  grid-auto-rows: 300px*/
   gap: 5px;
-  grid-template_areas:
+  grid-template-areas:
     "Box-1 Box-2 Box-3 Box-4"
     "MAIN MAIN MAIN MAIN";
+  grid-area: Fandoms; /* Add this to match the parent grid */
 }
-.FandomsGrid div{
-  
+
+.FandomsGrid div {
   padding: 1px;
   font-size: 20px;
   color: #dadbe8;
-  text-align: center; 
-  
+  text-align: center;
   width: 85%;
 }
 
@@ -93,102 +78,123 @@ h1{
   border-width: 100px;
   border-image: url(https://sl3ep.neocities.org/Images/divBorder3.png) 800 repeat;
   border-image-outset: 12px;
-  border-image-slice: 17%;;
-  
+  border-image-slice: 17%;
   background-color: #010620;
   font-size: 15px;
 }
 
+.sideBar {
+  grid-area: SideBar;
+  background-image: url(/Images/sidebar-image.png); /* Replace with your actual image path */
+  background-size: cover; /* Ensure the image covers the sidebar */
+  background-position: center; /* Center the image */
+}
 
-.sideBar{
-  background-image: url(https://drive.google.com/file/d/1WTLuL15sK4BrB7VDgIUQhlqQsC7L6ect/view?usp=drive_link);
+/* Fix the wall corners to the top-right and bottom-left */
+.WallBorderTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.WallBorderBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Optional: Adjust image sizing if needed */
+.WallBorderTop img,
+.WallBorderBottom img {
+  width: 260px;
+  height: 310px;
 }
 
 .TITLE {
-  margin:auto;
-  
+  margin: auto;
+  grid-area: Title;
 }
 
-/* buttons for the other pages grid*/
-.ButtonBottomSection{
-  
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- column-gap: 30px;
-  
+/* Buttons for the other pages grid */
+.ButtonBottomSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
   justify-content: center;
   border-style: solid;
   border-width: 100px;
   border-image: url(https://sl3ep.neocities.org/Images/divBorder3.png) 600 repeat;
   border-image-outset: 1rem;
-  border-image-slice: 15%;;
+  border-image-slice: 15%;
   margin: auto;
   width: 85%;
   background-color: #010620;
   font-size: 15px;
-
-  
+  grid-area: WebButtons;
 }
-.ButtonBottomSection div{
-  /*background-color: #bfceff;*/
-  
+
+.ButtonBottomSection div {
   padding: 10px;
   font-size: 30px;
   color: black;
   text-align: center;
 }
 
-.FriendsLinking div {
- background-color: #010620;
-
+.FriendsLinking {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  justify-content: center;
+  margin: auto;
+  width: 85%;
+  grid-area: Friends;
+  background-color: #010620;
 }
- .WebButtons{
-   background-color: #393250;
-   padding: 20px 50px;
-   display: inline-block;
-   cursor: pointer;
-   font-family: "Garmond";
-   font-size: 20px;
-   
- }
-.WebButons : hover {
-  background-color: #816c93;
-   padding: 20px 50px;
-   display: inline-block;
-   cursor: pointer;
-   font-family: "Garmond";
-   font-size: 22px;
-   
-/*end for buttons for the other pages grid*/
 
+.FriendsLinking div {
+  padding: 10px;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+
+.WebButtons {
+  background-color: #393250;
+  padding: 20px 50px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Garmond";
+  font-size: 20px;
+  color: #dadbe8;
+  border: none;
+  margin: 10px;
+}
+
+.WebButtons:hover {
+  background-color: #816c93;
+  padding: 20px 50px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Garmond";
+  font-size: 22px;
+}
+
+/* Other classes (unchanged) */
 .HangingLeaves {
   position: absolute;
   z-index: 1;
   top: 10px;
   left: 10px;
 }
-.NORMALdiv{
-  
+
+.NORMALdiv {
   border-width: 3px;
   padding: 20px;
   width: 75%;
   margin: auto;
 }
 
-.WallBorderTop {
-  position: fixed;
-  top: 0%;
-  right: 0%;
-  
-}
-
-
-.WallBorderBottom {
-
-  transform: scale(-1, -1);
-  
-  position: fixed;
-  bottom: 0%;
-  left: 0%;
-  
-}
