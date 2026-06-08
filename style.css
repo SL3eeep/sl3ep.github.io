@@ -91,12 +91,13 @@ h1 {
 }
 
 /* Fix the wall corners to the top-right and bottom-left */
+/* Fix the wall corners to the top-right and bottom-left */
 .WallBorderTop {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1000;
-  pointer-events: none;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  pointer-events: none; /* Allow clicks to pass through */
 }
 
 .WallBorderBottom {
@@ -107,12 +108,19 @@ h1 {
   pointer-events: none;
 }
 
-/* Optional: Adjust image sizing if needed */
+/* Style the images inside the fixed divs */
 .WallBorderTop img,
 .WallBorderBottom img {
   width: 260px;
   height: 310px;
+  display: block; /* Remove extra space below the image */
 }
+
+/* Optional: Flip the bottom image horizontally if needed */
+.WallBorderBottom img {
+  transform: scaleY(-1); /* Flip vertically */
+}
+
 
 .TITLE {
   margin: auto;
